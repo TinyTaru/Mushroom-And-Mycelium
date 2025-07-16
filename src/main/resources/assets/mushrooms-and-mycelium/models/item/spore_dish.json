@@ -1,0 +1,9 @@
+{
+  "parent": "mushrooms-and-mycelium:block/spore_dish",
+  "overrides": [
+    {
+      "predicate": { "full": 1 },
+      "model": "mushrooms-and-mycelium:block/spore_dish_full"
+    }
+  ]
+}

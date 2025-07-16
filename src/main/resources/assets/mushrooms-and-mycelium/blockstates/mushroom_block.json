@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "mushrooms-and-mycelium:block/mushroom_block" }
+  }
+}

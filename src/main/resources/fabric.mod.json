@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "mushrooms-and-mycelium",
+	"version": "${version}",
+	"name": "Mushroom and Mycelium",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mushrooms-and-mycelium/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"tinytaru.mushroomsandmycelium.MushroomAndMycelium"
+		],
+		"client": [
+			"tinytaru.mushroomsandmycelium.MushroomAndMyceliumClient"
+		]
+	},
+	"mixins": [
+		"mushrooms-and-mycelium.mixins.json",
+		{
+			"config": "mushrooms-and-mycelium.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

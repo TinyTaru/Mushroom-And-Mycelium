@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cross",
+
+  "ambientocclusion": false,
+  "shade": false,
+
+  "textures": {
+    "cross":    "mushrooms-and-mycelium:block/oyster_mushroom",
+    "particle": "mushrooms-and-mycelium:block/oyster_mushroom"
+  },
+
+  "render_type": "cutout"
+}

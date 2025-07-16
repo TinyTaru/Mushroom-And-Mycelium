@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "# #",
+        "M M"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:string"
+        },
+        "M": {
+            "item": "mushrooms-and-mycelium:mushroom_leather"
+        }
+    },
+    "result": {
+        "item": "mushrooms-and-mycelium:mushroom_boots",
+        "count": 1
+    }
+}

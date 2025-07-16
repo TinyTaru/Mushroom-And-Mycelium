@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "full=false": { "model": "mushrooms-and-mycelium:block/spore_dish" },
+    "full=true":  { "model": "mushrooms-and-mycelium:block/spore_dish_full"  }
+  }
+}

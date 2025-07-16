@@ -1,0 +1,6 @@
+{
+  "type": "fabric:add_features",
+  "biomes": "#minecraft:is_forest",
+  "features": ["mushrooms-and-mycelium:fallen_log_with_mushrooms"],
+  "step": "top_layer_modification"
+}

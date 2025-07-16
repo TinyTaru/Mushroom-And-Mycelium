@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:paper"
+        },
+        {
+            "item": "minecraft:paper"
+        },
+        {
+            "item": "minecraft:paper"
+        },
+        {
+            "item": "mushrooms-and-mycelium:mushroom_leather"
+        }
+    ],
+    "result": {
+        "item": "minecraft:book",
+        "count": 1
+    }
+}
