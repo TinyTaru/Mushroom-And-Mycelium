@@ -4,6 +4,9 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.loot.context.LootContext;
+import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -13,6 +16,10 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import tinytaru.mushroomsandmycelium.block.ModBlocks;
+import tinytaru.mushroomsandmycelium.item.ModItems;
+
+import java.util.Collections;
+import java.util.List;
 
 public class SporeDishBlock extends Block {
     public static final BooleanProperty FULL = BooleanProperty.of("full");
@@ -40,6 +47,15 @@ public class SporeDishBlock extends Block {
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
+    }
+
+    @Override
+    public List<ItemStack> getDroppedStacks(BlockState state, LootContextParameterSet.Builder builder) {
+        List<ItemStack> drops = super.getDroppedStacks(state, builder);
+        if (state.get(FULL)) {
+            drops.add(new ItemStack(ModItems.SPORES));
+        }
+        return drops;
     }
 
     @Override
