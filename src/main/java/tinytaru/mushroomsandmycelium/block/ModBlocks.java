@@ -26,6 +26,12 @@ public class ModBlocks {
             true
 
     );
+    public static final Block SAWDUST_BLOCK = register(
+            new Block(AbstractBlock.Settings.create().strength(1.0f).sounds(BlockSoundGroup.GRASS)),
+            "sawdust_block",
+            true
+
+    );
     public static final Block SPORE_DISH = register(
             new SporeDishBlock(),     // ← your custom class!
             "spore_dish",
