@@ -59,6 +59,10 @@ public class ModItems {
             new Item(new FabricItemSettings()),
             "raw_mushroom_leather"
     );
+    public static final Item SPORES = register(
+            new Item(new FabricItemSettings()),
+            "spores"
+    );
 
     public static Item register(Item item, String id) {
         // Create the identifier for the item.
@@ -88,6 +92,7 @@ public class ModItems {
                 itemGroup.add(ModItems.MUSHROOM_LEGGINGS);
                 itemGroup.add(ModItems.MUSHROOM_LEATHER);
                 itemGroup.add(ModItems.MUSHROOM_BOOTS);
+                itemGroup.add(ModItems.SPORES);
 
 
                 // ...
