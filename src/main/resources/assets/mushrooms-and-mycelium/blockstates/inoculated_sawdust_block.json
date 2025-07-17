@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mushrooms-and-mycelium:block/inoculated_sawdust_block"
+    }
+  }
+}
