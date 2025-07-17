@@ -11,5 +11,6 @@
   "block.mushrooms-and-mycelium.mushroom_block": "Block of Mushrooms",
   "block.mushrooms-and-mycelium.spore_dish": "Spore Dish",
   "block.mushrooms-and-mycelium.oyster_mushroom": "Oyster Mushroom",
-  "block.mushrooms-and-mycelium.sawdust_block": "Sawdust Block"
+  "block.mushrooms-and-mycelium.sawdust_block": "Sawdust Block",
+  "block.mushrooms-and-mycelium.inoculated_sawdust_block": "Inoculated Sawdust Block"
 }

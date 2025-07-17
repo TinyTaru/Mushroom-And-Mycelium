@@ -37,8 +37,11 @@ public class ModBlocks {
             "spore_dish",
             true
     );
-
-
+    public static final Block INOCULATED_SAWDUST_BLOCK = register(
+            new Block(AbstractBlock.Settings.create().strength(1.0f).sounds(BlockSoundGroup.FUNGUS)),
+            "inoculated_sawdust_block",
+            true
+    );
     public static final Block OYSTER_MUSHROOM = register(
             new FlowerBlock(
                     StatusEffects.SATURATION, // This status effect is just a placeholder; required by FlowerBlock.
@@ -72,6 +75,7 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.MUSHROOM_BLOCK.asItem());
             itemGroup.add(ModBlocks.OYSTER_MUSHROOM.asItem());
             itemGroup.add(ModBlocks.SPORE_DISH.asItem());
+            itemGroup.add(ModBlocks.INOCULATED_SAWDUST_BLOCK.asItem());
         });
     }
 }
