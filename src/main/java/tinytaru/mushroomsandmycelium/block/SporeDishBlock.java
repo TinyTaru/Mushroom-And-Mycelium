@@ -4,14 +4,20 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.context.LootContextParameterSet;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -114,5 +120,27 @@ public class SporeDishBlock extends Block {
             drops.add(new ItemStack(ModItems.SPORES));
         }
         return drops;
+    }
+
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        if (!world.isClient && state.get(FULL)) {
+            // Give player a spore
+            ItemStack sporeStack = new ItemStack(ModItems.SPORES);
+            if (!player.giveItemStack(sporeStack)) {
+                // If player's inventory is full, drop the spore in the world
+                player.dropItem(sporeStack, false);
+            }
+            
+            // Empty the dish
+            world.setBlockState(pos, state.with(FULL, false), 3);
+            
+            // Play bee exiting hive sound
+            world.playSound(null, pos, SoundEvents.BLOCK_BEEHIVE_EXIT, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            
+            return ActionResult.SUCCESS;
+        }
+        
+        return ActionResult.PASS;
     }
 }
