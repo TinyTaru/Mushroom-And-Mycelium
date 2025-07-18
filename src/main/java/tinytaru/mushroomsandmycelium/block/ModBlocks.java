@@ -76,6 +76,7 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.OYSTER_MUSHROOM.asItem());
             itemGroup.add(ModBlocks.SPORE_DISH.asItem());
             itemGroup.add(ModBlocks.INOCULATED_SAWDUST_BLOCK.asItem());
+            itemGroup.add(ModBlocks.SAWDUST_BLOCK.asItem());
         });
     }
 }

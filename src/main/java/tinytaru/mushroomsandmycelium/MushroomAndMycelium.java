@@ -22,18 +22,7 @@ public class MushroomAndMycelium implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     
     // Item Group
-    public static final ItemGroup MUSHROOM_ITEM_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(ModBlocks.MUSHROOM_BLOCK))
-            .displayName(Text.translatable("itemGroup." + MOD_ID + ".mushroom_group"))
-            .entries((context, entries) -> {
-                entries.add(ModBlocks.MUSHROOM_BLOCK);
-                entries.add(ModBlocks.OYSTER_MUSHROOM);
-                entries.add(ModBlocks.SPORE_DISH);
-                entries.add(ModBlocks.SAWDUST_BLOCK);
-                entries.add(ModBlocks.INOCULATED_SAWDUST_BLOCK);
-                entries.add(ModItems.SPORES);
-            })
-            .build();
+
 
     @Override
     public void onInitialize() {
@@ -42,7 +31,7 @@ public class MushroomAndMycelium implements ModInitializer {
         ModItems.initialize();
         
         // Register item group
-        Registry.register(Registries.ITEM_GROUP, new Identifier(MOD_ID, "mushroom_group"), MUSHROOM_ITEM_GROUP);
+
         
         // Register base worldgen feature (for JSON worldgen)
         Registry.register(

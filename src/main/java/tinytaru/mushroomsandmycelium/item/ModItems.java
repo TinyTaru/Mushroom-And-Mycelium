@@ -93,7 +93,7 @@ public class ModItems {
                 itemGroup.add(ModItems.MUSHROOM_LEATHER);
                 itemGroup.add(ModItems.MUSHROOM_BOOTS);
                 itemGroup.add(ModItems.SPORES);
-
+                itemGroup.add(ModItems.RAW_MUSHROOM_LEATHER);
 
                 // ...
             });
