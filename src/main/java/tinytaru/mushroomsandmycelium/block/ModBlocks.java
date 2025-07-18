@@ -32,13 +32,19 @@ public class ModBlocks {
             true
 
     );
+    public static final Block SPENT_SAWDUST_BLOCK = register(
+            new Block(AbstractBlock.Settings.create().strength(1.0f).sounds(BlockSoundGroup.GRASS)),
+            "spent_sawdust_block",
+            true
+
+    );
     public static final Block SPORE_DISH = register(
             new SporeDishBlock(),     // ← your custom class!
             "spore_dish",
             true
     );
     public static final Block INOCULATED_SAWDUST_BLOCK = register(
-            new Block(AbstractBlock.Settings.create().strength(1.0f).sounds(BlockSoundGroup.FUNGUS)),
+            new InoculatedSawdustBlock(AbstractBlock.Settings.create().strength(0.5f).sounds(BlockSoundGroup.WOOD).ticksRandomly()),
             "inoculated_sawdust_block",
             true
     );
@@ -77,6 +83,7 @@ public class ModBlocks {
             itemGroup.add(ModBlocks.SPORE_DISH.asItem());
             itemGroup.add(ModBlocks.INOCULATED_SAWDUST_BLOCK.asItem());
             itemGroup.add(ModBlocks.SAWDUST_BLOCK.asItem());
+            itemGroup.add(ModBlocks.SPENT_SAWDUST_BLOCK.asItem());
         });
     }
 }
