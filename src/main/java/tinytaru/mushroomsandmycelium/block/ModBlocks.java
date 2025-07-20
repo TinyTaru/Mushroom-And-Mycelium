@@ -61,6 +61,15 @@ public class ModBlocks {
             "oyster_mushroom",
             true
     );
+    public static final Block PUFFBALL_MUSHROOM = register(
+            new Block(AbstractBlock.Settings.create()
+                    .strength(0.5f)
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+            ),
+            "puffball_mushroom",
+            true
+    );
 
     public static Block register(Block block, String name, boolean shouldRegisterItem) {
         // Register the block and its item.
@@ -80,6 +89,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ModItems.CUSTOM_ITEM_GROUP_KEY).register((itemGroup) -> {
             itemGroup.add(ModBlocks.MUSHROOM_BLOCK.asItem());
             itemGroup.add(ModBlocks.OYSTER_MUSHROOM.asItem());
+            itemGroup.add(ModBlocks.PUFFBALL_MUSHROOM.asItem());
             itemGroup.add(ModBlocks.SPORE_DISH.asItem());
             itemGroup.add(ModBlocks.INOCULATED_SAWDUST_BLOCK.asItem());
             itemGroup.add(ModBlocks.SAWDUST_BLOCK.asItem());

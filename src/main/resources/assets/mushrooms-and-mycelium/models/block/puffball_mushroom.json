@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "mushrooms-and-mycelium:block/puffball_mushroom"
+  }
+}
